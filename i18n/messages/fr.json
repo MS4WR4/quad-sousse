@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "siteTitle": "Quad Sousse Loisirs | Randonnées en quad à Sousse",
+    "siteDescription": "Découvrez Sousse autrement avec des randonnées en quad guidées par une équipe locale expérimentée depuis 2005.",
+    "bookingTitle": "Réserver une randonnée en quad | Quad Sousse Loisirs",
+    "bookingDescription": "Choisissez une date et consultez les disponibilités des randonnées Quad Sousse."
+  },
+  "site": {
+    "localeName": "Français",
+    "nav": {
+      "circuit": "Le circuit",
+      "experiences": "Excursions",
+      "story": "Notre histoire",
+      "safety": "Sécurité",
+      "contact": "Contact",
+      "book": "Réserver"
+    },
+    "hero": {
+      "eyebrow": "Sousse · Kantaoui · Depuis 2005",
+      "titleLead": "La côte change",
+      "titleAccent": "de rythme.",
+      "description": "Des randonnées en quad guidées par une équipe locale, entre pistes sauvages, lumière méditerranéenne et montée d’adrénaline.",
+      "primaryCta": "Réserver en ligne",
+      "secondaryCta": "Voir les excursions",
+      "tags": [
+        "Guide local",
+        "Équipement inclus",
+        "Tous niveaux"
+      ],
+      "modelLabel": "Quad 3D interactif",
+      "modelHint": "Bougez le pointeur pour explorer",
+      "scroll": "Défiler pour partir"
+    },
+    "ticker": [
+      "Dunes",
+      "Adrénaline",
+      "Côte tunisienne",
+      "Guides locaux"
+    ],
+    "intro": {
+      "eyebrow": "Le terrain nous connaît",
+      "title": "Votre aventure. Notre maison.",
+      "body": "Depuis deux décennies, Quad Sousse Loisirs fait découvrir une autre facette du Sahel tunisien : plus brute, plus libre et toujours encadrée avec soin.",
+      "since": "20+",
+      "sinceLabel": "ans d’expérience locale"
+    },
+    "gallery": {
+      "eyebrow": "Sur notre vrai terrain",
+      "title": "De vraies pistes. De vrais souvenirs.",
+      "body": "Ces images viennent directement des sorties Quad Sousse Loisirs : nos clients, nos quads KYMCO et les chemins naturels autour de Kantaoui.",
+      "mainAlt": "Clients de Quad Sousse Loisirs alignés sur des quads KYMCO dans le circuit naturel de Kantaoui",
+      "mainCaption": "Un départ réel sur notre circuit, au cœur de la végétation du Sahel.",
+      "archiveAlt": "Collage d’archives de sorties en quad, à cheval et à dos de chameau organisé par Quad Sousse Loisirs",
+      "archiveCaption": "Les archives de l’agence : des groupes, des guides et des journées d’aventure à Sousse.",
+      "photos": [
+        {
+          "title": "La flotte est prête",
+          "caption": "Des quads entretenus, alignés et prêts pour le prochain départ.",
+          "alt": "Grande flotte de quads bleus, rouges et orange alignés au départ à Sousse"
+        },
+        {
+          "title": "Départs en équipe",
+          "caption": "Une mise en route claire avant de suivre le guide sur les chemins du Sahel.",
+          "alt": "Groupe équipé de vestes orange et de casques sur des quads à Sousse"
+        },
+        {
+          "title": "L’aventure en vrai",
+          "caption": "Des groupes venus partager la piste, le paysage et un vrai moment tunisien.",
+          "alt": "Groupe de visiteurs sur des quads bleus et rouges près de cactus"
+        },
+        {
+          "title": "L’appel des pistes",
+          "caption": "Une ligne de quads face aux chemins rocailleux et à la lumière de fin de journée.",
+          "alt": "Quads bleus et rouges alignés sur une piste rocailleuse au coucher du soleil"
+        },
+        {
+          "title": "À dos de dromadaire",
+          "caption": "Pour ralentir le rythme et découvrir autrement les paysages autour de Kantaoui.",
+          "alt": "Promenade en file à dos de dromadaire dans la campagne de Sousse"
+        },
+        {
+          "title": "Une autre cadence",
+          "caption": "Une promenade calme, colorée et accompagnée au cœur de la campagne.",
+          "alt": "Caravane de dromadaires avec des visiteurs sur un chemin bordé d’arbres"
+        },
+        {
+          "title": "Transfert sans friction",
+          "caption": "Notre équipe Rosa Travel peut aussi organiser l’arrivée et le retour de votre groupe.",
+          "alt": "Équipe Rosa Travel devant une flotte de minibus blancs à Sousse"
+        }
+      ]
+    },
+    "experiences": {
+      "eyebrow": "Choisissez votre rythme",
+      "title": "Trois façons de sortir du cadre.",
+      "body": "Chaque départ est adapté au groupe, au niveau des pilotes et aux conditions du terrain.",
+      "cards": [
+        {
+          "number": "01",
+          "title": "Randonnée signature",
+          "duration": "1 heure",
+          "description": "Une première dose de sensations sur nos pistes favorites autour de Sousse."
+        },
+        {
+          "number": "02",
+          "title": "Golden hour",
+          "duration": "2 heures",
+          "description": "Une sortie plus longue lorsque la lumière transforme le paysage et la poussière."
+        },
+        {
+          "number": "03",
+          "title": "Aventure privée",
+          "duration": "Sur mesure",
+          "description": "Un format exclusif pour couples, familles, groupes et événements privés."
+        }
+      ],
+      "enquire": "Demander les disponibilités"
+    },
+    "story": {
+      "eyebrow": "Quad Sousse Loisirs",
+      "title": "Une équipe d’ici, une énergie à part.",
+      "body": "Fondée en 2005, notre agence associe connaissance du terrain, guides expérimentés et attention portée à chaque visiteur. Notre priorité : une aventure mémorable, fluide et responsable.",
+      "stats": [
+        {
+          "value": "2005",
+          "label": "année de création"
+        },
+        {
+          "value": "15K+",
+          "label": "clients accueillis"
+        },
+        {
+          "value": "12",
+          "label": "guides experts"
+        },
+        {
+          "value": "4.9/5",
+          "label": "note voyageurs"
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "Simple du début à la fin",
+      "title": "Vous venez. On s’occupe du reste.",
+      "steps": [
+        {
+          "title": "Accueil",
+          "body": "Rendez-vous à notre base de Kantaoui."
+        },
+        {
+          "title": "Briefing",
+          "body": "Prise en main, casque et règles de sécurité."
+        },
+        {
+          "title": "Ride",
+          "body": "Départ avec votre guide sur un itinéraire adapté."
+        },
+        {
+          "title": "Souvenir",
+          "body": "Retour avec de la poussière et une vraie histoire."
+        }
+      ]
+    },
+    "safety": {
+      "eyebrow": "Le plaisir, bien encadré",
+      "title": "L’adrénaline n’exclut jamais la maîtrise.",
+      "body": "Nos guides évaluent le niveau du groupe avant chaque départ et ajustent le rythme tout au long de la sortie.",
+      "points": [
+        "Briefing complet avant le départ",
+        "Casques et équipement fournis",
+        "Guide local pendant toute la randonnée"
+      ]
+    },
+    "contact": {
+      "eyebrow": "Prêt à rouler ?",
+      "title": "Sousse vous attend.",
+      "body": "Écrivez-nous pour connaître les départs disponibles et choisir l’expérience qui vous ressemble.",
+      "addressLabel": "Base",
+      "address": "Route Touristique Kantaoui, en face de l’Hôtel Soviva",
+      "hoursLabel": "Tous les jours",
+      "hours": "08:00 — 20:00",
+      "call": "Appeler",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "footer": "Aventures en quad à Sousse, Tunisie.",
+    "a11y": {
+      "mainNavigation": "Navigation principale",
+      "language": "Choisir la langue",
+      "quadModel": "Quad rouge interactif en trois dimensions",
+      "loadingModel": "Chargement du quad",
+      "unavailableModel": "L’aperçu 3D n’est pas disponible sur cet appareil."
+    }
+  },
+  "booking": {
+    "back": "Retour à l’accueil",
+    "eyebrow": "Réservez votre sortie",
+    "title": "Choisissez le moment parfait.",
+    "description": "Sélectionnez une date pour afficher les horaires, les prix et le nombre de quads encore disponibles.",
+    "chooseExperience": "Choisissez votre expérience",
+    "availableDates": "Prochaines dates disponibles",
+    "otherDate": "Autre date",
+    "tourDate": "Date de la sortie",
+    "availableTimes": "Horaires et tarifs",
+    "selectSlotHint": "Choisissez un horaire disponible pour continuer.",
+    "selectedSlot": "Horaire sélectionné",
+    "customerDetails": "Vos coordonnées",
+    "fullName": "Nom complet",
+    "email": "Adresse e-mail",
+    "continueToPayment": "Continuer vers le paiement",
+    "paymentTitle": "Paiement sécurisé",
+    "paymentSecurity": "Vos coordonnées bancaires sont chiffrées et traitées directement par Stripe.",
+    "paymentStarting": "Préparation du paiement…",
+    "paymentUnavailable": "Le paiement en ligne est temporairement indisponible. Contactez-nous pour confirmer votre réservation.",
+    "paymentError": "Le paiement n’a pas pu démarrer. Vérifiez vos informations et réessayez.",
+    "paymentSuccess": "Paiement confirmé. Votre randonnée est réservée !",
+    "payNow": "Payer maintenant",
+    "checking": "Vérification des disponibilités…",
+    "loadError": "Impossible de charger les disponibilités pour le moment.",
+    "noSlots": "Aucun horaire n’est encore publié pour cette date.",
+    "oneQuadLeft": "1 quad disponible",
+    "quadsLeft": "{count} quads disponibles"
+  }
+}

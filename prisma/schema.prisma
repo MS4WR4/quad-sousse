@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model TimeSlot {
+  id        String    @id @default(cuid())
+  time      String    @unique
+  /// Integer amount in the payment currency's smallest unit.
+  price     Int
+  capacity  Int
+  active    Boolean   @default(true)
+  bookings  Booking[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([active, time])
+}
+
+model Booking {
+  id                    String   @id @default(cuid())
+  customerName          String
+  email                 String
+  experience            String   @default("signature")
+  /// Amount captured in the currency's smallest unit.
+  amount                Int      @default(0)
+  currency              String   @default("TND")
+  /// Stored as UTC midnight for the selected Sousse calendar day.
+  date                  DateTime
+  timeSlotId            String
+  paid                  Boolean  @default(false)
+  stripePaymentIntentId String?  @unique
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  timeSlot TimeSlot @relation(fields: [timeSlotId], references: [id], onDelete: Restrict)
+
+  @@index([date, timeSlotId, paid])
+  @@index([experience, date])
+  @@index([email])
+}

@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "siteTitle": "Quad Sousse Loisirs | Quad adventures in Sousse",
+    "siteDescription": "Discover another side of Sousse with guided quad rides led by an experienced local team since 2005.",
+    "bookingTitle": "Book a quad adventure | Quad Sousse Loisirs",
+    "bookingDescription": "Choose a date and view live Quad Sousse tour availability."
+  },
+  "site": {
+    "localeName": "English",
+    "nav": {
+      "circuit": "The circuit",
+      "experiences": "Experiences",
+      "story": "Our story",
+      "safety": "Safety",
+      "contact": "Contact",
+      "book": "Book now"
+    },
+    "hero": {
+      "eyebrow": "Sousse · Kantaoui · Since 2005",
+      "titleLead": "The coast shifts",
+      "titleAccent": "into gear.",
+      "description": "Guided quad adventures led by a local team, across wild trails, Mediterranean light and a serious rush of adrenaline.",
+      "primaryCta": "Book online",
+      "secondaryCta": "Explore the rides",
+      "tags": [
+        "Local guide",
+        "Gear included",
+        "All levels"
+      ],
+      "modelLabel": "Interactive 3D quad",
+      "modelHint": "Move your pointer to explore",
+      "scroll": "Scroll to ride"
+    },
+    "ticker": [
+      "Dunes",
+      "Adrenaline",
+      "Tunisian coast",
+      "Local guides"
+    ],
+    "intro": {
+      "eyebrow": "We know the terrain",
+      "title": "Your adventure. Our home.",
+      "body": "For two decades, Quad Sousse Loisirs has revealed a different side of Tunisia’s Sahel: rawer, freer and always carefully guided.",
+      "since": "20+",
+      "sinceLabel": "years of local experience"
+    },
+    "gallery": {
+      "eyebrow": "On our real terrain",
+      "title": "Real trails. Real memories.",
+      "body": "These images come directly from Quad Sousse Loisirs rides: our guests, our KYMCO quads and the natural tracks around Kantaoui.",
+      "mainAlt": "Quad Sousse Loisirs guests lined up on KYMCO quad bikes on the natural Kantaoui circuit",
+      "mainCaption": "A real departure on our circuit, surrounded by the landscape of Tunisia’s Sahel.",
+      "archiveAlt": "Quad Sousse Loisirs archive collage showing quad, horse and camel excursions",
+      "archiveCaption": "From the agency archive: groups, guides and adventure days in Sousse.",
+      "photos": [
+        {
+          "title": "The fleet is ready",
+          "caption": "Serviced, lined up and prepared for the next departure.",
+          "alt": "Large fleet of blue, red and orange quad bikes lined up at the Sousse base"
+        },
+        {
+          "title": "Start as a team",
+          "caption": "A clear introduction before following the guide onto the Sahel trails.",
+          "alt": "Group in orange jackets and helmets sitting on quad bikes in Sousse"
+        },
+        {
+          "title": "The real adventure",
+          "caption": "Guests sharing the trail, the landscape and an authentic Tunisian moment.",
+          "alt": "Group of visitors on blue and red quad bikes beside prickly pear cactus"
+        },
+        {
+          "title": "The trail is calling",
+          "caption": "A line of quads facing rocky tracks in warm late-afternoon light.",
+          "alt": "Blue and red quad bikes lined up on a rocky trail at golden hour"
+        },
+        {
+          "title": "Camel country",
+          "caption": "Slow the pace and see the countryside around Kantaoui from another angle.",
+          "alt": "Visitors riding camels in single file through the Sousse countryside"
+        },
+        {
+          "title": "A gentler rhythm",
+          "caption": "A calm, colourful guided caravan through the rural landscape.",
+          "alt": "Guided camel caravan carrying visitors along a tree-lined track"
+        },
+        {
+          "title": "Seamless transfer",
+          "caption": "Our Rosa Travel team can also arrange arrival and return transport for your group.",
+          "alt": "Rosa Travel team standing beside a fleet of white minibuses in Sousse"
+        }
+      ]
+    },
+    "experiences": {
+      "eyebrow": "Choose your pace",
+      "title": "Three ways to leave ordinary behind.",
+      "body": "Every departure is adapted to the group, the riders’ experience and the day’s terrain conditions.",
+      "cards": [
+        {
+          "number": "01",
+          "title": "Signature ride",
+          "duration": "1 hour",
+          "description": "A first hit of excitement on our favourite trails around Sousse."
+        },
+        {
+          "number": "02",
+          "title": "Golden hour",
+          "duration": "2 hours",
+          "description": "A longer escape as the evening light transforms the landscape and dust."
+        },
+        {
+          "number": "03",
+          "title": "Private adventure",
+          "duration": "Tailored",
+          "description": "An exclusive format for couples, families, groups and private events."
+        }
+      ],
+      "enquire": "Ask about availability"
+    },
+    "story": {
+      "eyebrow": "Quad Sousse Loisirs",
+      "title": "A local crew with a different energy.",
+      "body": "Founded in 2005, our agency brings together deep terrain knowledge, experienced guides and genuine care for every guest. Our priority is a memorable, seamless and responsible adventure.",
+      "stats": [
+        {
+          "value": "2005",
+          "label": "founded"
+        },
+        {
+          "value": "15K+",
+          "label": "guests welcomed"
+        },
+        {
+          "value": "12",
+          "label": "expert guides"
+        },
+        {
+          "value": "4.9/5",
+          "label": "guest rating"
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "Easy from start to finish",
+      "title": "You arrive. We handle the rest.",
+      "steps": [
+        {
+          "title": "Welcome",
+          "body": "Meet us at our Kantaoui base."
+        },
+        {
+          "title": "Briefing",
+          "body": "Controls, helmet and clear safety rules."
+        },
+        {
+          "title": "Ride",
+          "body": "Follow your guide on a route matched to you."
+        },
+        {
+          "title": "Memory",
+          "body": "Return with some dust and a real story."
+        }
+      ]
+    },
+    "safety": {
+      "eyebrow": "Excitement, expertly guided",
+      "title": "Adrenaline never means losing control.",
+      "body": "Our guides assess the group before every departure and adjust the pace throughout the ride.",
+      "points": [
+        "Complete briefing before departure",
+        "Helmets and equipment supplied",
+        "Local guide throughout the ride"
+      ]
+    },
+    "contact": {
+      "eyebrow": "Ready to ride?",
+      "title": "Sousse is waiting.",
+      "body": "Message us to check upcoming departures and choose the experience that fits you.",
+      "addressLabel": "Base",
+      "address": "Route Touristique Kantaoui, opposite Hotel Soviva",
+      "hoursLabel": "Every day",
+      "hours": "08:00 — 20:00",
+      "call": "Call",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "footer": "Quad adventures in Sousse, Tunisia.",
+    "a11y": {
+      "mainNavigation": "Main navigation",
+      "language": "Choose language",
+      "quadModel": "Interactive red quad bike in three dimensions",
+      "loadingModel": "Loading quad",
+      "unavailableModel": "The 3D preview is unavailable on this device."
+    }
+  },
+  "booking": {
+    "back": "Back to the homepage",
+    "eyebrow": "Book your ride",
+    "title": "Pick the perfect time.",
+    "description": "Select a date to view live schedules, prices and the number of quads still available.",
+    "chooseExperience": "Choose your experience",
+    "availableDates": "Next available dates",
+    "otherDate": "Other date",
+    "tourDate": "Tour date",
+    "availableTimes": "Times and prices",
+    "selectSlotHint": "Choose an available time to continue.",
+    "selectedSlot": "Selected time",
+    "customerDetails": "Your details",
+    "fullName": "Full name",
+    "email": "Email address",
+    "continueToPayment": "Continue to payment",
+    "paymentTitle": "Secure payment",
+    "paymentSecurity": "Your card details are encrypted and processed directly by Stripe.",
+    "paymentStarting": "Preparing payment…",
+    "paymentUnavailable": "Online payment is temporarily unavailable. Contact us to confirm your booking.",
+    "paymentError": "Payment could not be started. Check your details and try again.",
+    "paymentSuccess": "Payment confirmed. Your quad tour is booked!",
+    "payNow": "Pay now",
+    "checking": "Checking availability…",
+    "loadError": "Availability could not be loaded right now.",
+    "noSlots": "No time slots are published for this date yet.",
+    "oneQuadLeft": "1 quad available",
+    "quadsLeft": "{count} quads available"
+  }
+}
