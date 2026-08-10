@@ -274,15 +274,6 @@ export function LandingPage() {
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-blue-deep)] via-[var(--color-blue-deep)]/5 to-transparent" />
-                  <div className="absolute left-5 top-5 z-10 rounded-xl border border-white/30 bg-white/92 px-3 py-2 shadow-[0_12px_34px_rgba(7,21,40,.22)] backdrop-blur-md sm:left-6 sm:top-6">
-                    <Image
-                      alt=""
-                      aria-hidden
-                      className="h-auto w-24 sm:w-28"
-                      quality={100}
-                      src={agencyLogo}
-                    />
-                  </div>
                   <span className="absolute right-5 top-5 rounded-full border border-white/18 bg-[var(--color-blue-deep)]/45 px-3 py-1.5 text-[10px] font-black tracking-[0.18em] text-white/75 backdrop-blur-md">
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -562,10 +553,10 @@ export function LandingPage() {
 
 function Header({ locale, t }: { locale: Locale; t: SiteDictionary }) {
   return (
-    <header className="relative z-50 mx-auto flex w-full max-w-[1500px] items-center justify-between gap-5 px-5 py-5 sm:px-8 lg:px-12 lg:py-6">
+    <header className="relative z-50 flex min-h-[84px] w-full items-center justify-end gap-5 px-5 py-5 sm:px-8 lg:px-12 lg:py-6">
       <Link
         aria-label="Quad Sousse Loisirs"
-        className="shrink-0 rounded-xl bg-white px-3 py-2 shadow-[0_12px_38px_rgba(0,0,0,.2)]"
+        className="absolute left-5 top-5 shrink-0 rounded-xl bg-white px-3 py-2 shadow-[0_12px_38px_rgba(0,0,0,.2)] sm:left-8 lg:left-12 lg:top-6"
         href={`/${locale}`}
       >
         <Image
@@ -576,7 +567,7 @@ function Header({ locale, t }: { locale: Locale; t: SiteDictionary }) {
           src={agencyLogo}
         />
       </Link>
-      <nav aria-label={t.a11y.mainNavigation} className="hidden items-center gap-7 text-xs font-bold text-[var(--color-blue)]/58 xl:flex">
+      <nav aria-label={t.a11y.mainNavigation} className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 text-xs font-bold text-[var(--color-blue)]/58 xl:flex">
         <a className="transition hover:text-[var(--color-red)]" href="#circuit">{t.nav.circuit}</a>
         <a className="transition hover:text-[var(--color-red)]" href="#experiences">{t.nav.experiences}</a>
         <a className="transition hover:text-[var(--color-red)]" href="#story">{t.nav.story}</a>
