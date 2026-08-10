@@ -73,7 +73,6 @@ export function LandingPage() {
     offset: ["start start", "end start"],
   });
   const heroCopyY = useTransform(heroProgress, [0, 1], [0, 110]);
-  const heroCanvasY = useTransform(heroProgress, [0, 1], [0, 190]);
   const heroOpacity = useTransform(heroProgress, [0, 0.82], [1, 0]);
   const isArabic = locale === "ar";
 
@@ -165,7 +164,6 @@ export function LandingPage() {
             animate={{ opacity: 1, scale: 1 }}
             className="relative h-[50vh] min-h-[430px] min-w-0 max-w-full sm:h-[64vh] lg:h-[78vh] lg:min-h-[620px]"
             initial={reduceMotion ? undefined : { opacity: 0, scale: 0.88 }}
-            style={reduceMotion ? undefined : { opacity: heroOpacity, y: heroCanvasY }}
             transition={{ delay: 0.1, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="absolute inset-x-[10%] bottom-[12%] h-[16%] rounded-full bg-[var(--color-red)]/12 blur-[70px]" />
