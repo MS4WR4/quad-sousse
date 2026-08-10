@@ -7,24 +7,6 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 
 const jobs = [
   {
-    input: "public/images/agency/agency-collage.png",
-    output: "public/images/agency/agency-circuit-2x.png",
-    scale: 2,
-    enhancePhoto: true,
-  },
-  {
-    input: "public/images/agency/adventure-collage.png",
-    output: "public/images/agency/agency-adventure-2x.png",
-    scale: 2,
-    enhancePhoto: true,
-  },
-  {
-    input: "public/images/crimson-quad-preview.png",
-    output: "public/images/crimson-quad-preview-2x.png",
-    scale: 2,
-    enhancePhoto: false,
-  },
-  {
     input: "public/brand/quad-sousse-logo.png",
     output: "public/brand/quad-sousse-logo-4x.png",
     scale: 4,

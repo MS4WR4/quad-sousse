@@ -34,9 +34,9 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           alt: "Quad Sousse Loisirs — L’aventure commence ici.",
-          height: 1024,
+          height: 630,
           url: `${origin}/og.png`,
-          width: 1792,
+          width: 1200,
         },
       ],
       siteName: "Quad Sousse Loisirs",
