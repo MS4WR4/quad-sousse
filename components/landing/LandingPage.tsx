@@ -23,13 +23,13 @@ const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=0021623703703&text=Bonjour%2C+je+souhaite+joindre+un+conseiller.";
 
 const REAL_EXPERIENCE_IMAGES = [
-  "/images/real-experiences/fleet-lineup.webp",
-  "/images/real-experiences/quad-group.webp",
-  "/images/real-experiences/quad-guests.webp",
-  "/images/real-experiences/trail-lineup.webp",
-  "/images/real-experiences/camel-trail.webp",
-  "/images/real-experiences/camel-caravan.webp",
-  "/images/real-experiences/rosa-transfer.webp",
+  "/images/real-experiences/fleet-lineup.webp?v=20260810-hq",
+  "/images/real-experiences/quad-group.webp?v=20260810-hq",
+  "/images/real-experiences/quad-guests.webp?v=20260810-hq",
+  "/images/real-experiences/trail-lineup.webp?v=20260810-hq",
+  "/images/real-experiences/camel-trail.webp?v=20260810-hq",
+  "/images/real-experiences/camel-caravan.webp?v=20260810-hq",
+  "/images/real-experiences/rosa-transfer.webp?v=20260810-hq",
 ] as const;
 
 const REAL_EXPERIENCE_LAYOUTS = [
@@ -43,9 +43,9 @@ const REAL_EXPERIENCE_LAYOUTS = [
 ] as const;
 
 const OFFER_IMAGES = [
-  "/images/offers/quad-experience.webp",
-  "/images/offers/camel-experience.webp",
-  "/images/offers/quad-camel-experience.webp",
+  "/images/offers/quad-experience.webp?v=20260810-hq",
+  "/images/offers/camel-experience.webp?v=20260810-hq",
+  "/images/offers/quad-camel-experience.webp?v=20260810-hq",
 ] as const;
 
 const revealVariants: Variants = {
