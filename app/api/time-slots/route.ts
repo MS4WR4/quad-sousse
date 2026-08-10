@@ -6,7 +6,7 @@ import {
   calculateExperiencePrice,
   isExperienceId,
 } from "@/lib/experiences";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import {
   BOOKING_CURRENCY,
   type TimeSlotsApiResponse,
@@ -49,6 +49,7 @@ export async function GET(
   }
 
   try {
+    const prisma = await getPrisma();
     const [timeSlots, reservedBookings] = await prisma.$transaction([
       prisma.timeSlot.findMany({
         where: { active: true },

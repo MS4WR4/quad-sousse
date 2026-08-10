@@ -5,7 +5,7 @@ import {
   calculateExperiencePrice,
   isExperienceId,
 } from "@/lib/experiences";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { getStripeServer } from "@/lib/stripe";
 import { BOOKING_CURRENCY } from "@/types/time-slot";
 import type {
@@ -65,6 +65,7 @@ export async function POST(
   }
 
   try {
+    const prisma = await getPrisma();
     const timeSlot = await prisma.timeSlot.findFirst({
       where: { id: timeSlotId, active: true },
       select: { id: true, time: true, price: true, capacity: true },

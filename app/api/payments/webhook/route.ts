@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { getStripeServer } from "@/lib/stripe";
 
 export const dynamic = "force-dynamic";
@@ -36,6 +36,7 @@ export async function POST(request: Request) {
     const bookingId = paymentIntent.metadata.bookingId;
 
     if (bookingId) {
+      const prisma = await getPrisma();
       const booking = await prisma.booking.findUnique({
         where: { id: bookingId },
         select: { amount: true, currency: true, stripePaymentIntentId: true },
