@@ -18,28 +18,18 @@ import { QuadCanvas } from "@/components/three/QuadCanvas";
 import type { Locale, SiteDictionary } from "@/i18n/site";
 import { EXPERIENCE_IDS } from "@/lib/experiences";
 import agencyLogo from "@/public/brand/quad-sousse-logo-4x.png";
-import camelOfferImage from "@/public/images/offers/camel-experience.webp";
-import combinedOfferImage from "@/public/images/offers/quad-camel-experience.webp";
-import quadOfferImage from "@/public/images/offers/quad-experience.webp";
-import camelCaravanImage from "@/public/images/real-experiences/camel-caravan.webp";
-import camelTrailImage from "@/public/images/real-experiences/camel-trail.webp";
-import fleetLineupImage from "@/public/images/real-experiences/fleet-lineup.webp";
-import quadGroupImage from "@/public/images/real-experiences/quad-group.webp";
-import quadGuestsImage from "@/public/images/real-experiences/quad-guests.webp";
-import rosaTransferImage from "@/public/images/real-experiences/rosa-transfer.webp";
-import trailLineupImage from "@/public/images/real-experiences/trail-lineup.webp";
 
 const WHATSAPP_URL =
   "https://api.whatsapp.com/send?phone=0021623703703&text=Bonjour%2C+je+souhaite+joindre+un+conseiller.";
 
 const REAL_EXPERIENCE_IMAGES = [
-  fleetLineupImage,
-  quadGroupImage,
-  quadGuestsImage,
-  trailLineupImage,
-  camelTrailImage,
-  camelCaravanImage,
-  rosaTransferImage,
+  "/images/real-experiences/fleet-lineup.webp",
+  "/images/real-experiences/quad-group.webp",
+  "/images/real-experiences/quad-guests.webp",
+  "/images/real-experiences/trail-lineup.webp",
+  "/images/real-experiences/camel-trail.webp",
+  "/images/real-experiences/camel-caravan.webp",
+  "/images/real-experiences/rosa-transfer.webp",
 ] as const;
 
 const REAL_EXPERIENCE_LAYOUTS = [
@@ -52,7 +42,11 @@ const REAL_EXPERIENCE_LAYOUTS = [
   "lg:col-span-12 min-h-[300px] lg:min-h-[440px]",
 ] as const;
 
-const OFFER_IMAGES = [quadOfferImage, camelOfferImage, combinedOfferImage] as const;
+const OFFER_IMAGES = [
+  "/images/offers/quad-experience.webp",
+  "/images/offers/camel-experience.webp",
+  "/images/offers/quad-camel-experience.webp",
+] as const;
 
 const revealVariants: Variants = {
   hidden: { opacity: 0, y: 42 },
@@ -274,10 +268,10 @@ export function LandingPage() {
                     className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
                     fill
                     loading="lazy"
-                    placeholder="blur"
                     quality={92}
                     sizes={index === 0 || index === 6 ? "(max-width: 1024px) 100vw, 1400px" : "(max-width: 1024px) 100vw, 760px"}
                     src={image}
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-blue-deep)] via-[var(--color-blue-deep)]/5 to-transparent" />
                   <span className="absolute right-5 top-5 rounded-full border border-white/18 bg-[var(--color-blue-deep)]/45 px-3 py-1.5 text-[10px] font-black tracking-[0.18em] text-white/75 backdrop-blur-md">
@@ -334,10 +328,10 @@ export function LandingPage() {
                       className="object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
                       fill
                       loading="lazy"
-                      placeholder="blur"
                       quality={92}
                       sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       src={image}
+                      unoptimized
                     />
                   </div>
                   <div className="flex min-h-48 flex-col border-t border-white/10 p-6 text-white sm:p-7">
