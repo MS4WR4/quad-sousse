@@ -18,6 +18,9 @@ import { QuadCanvas } from "@/components/three/QuadCanvas";
 import type { Locale, SiteDictionary } from "@/i18n/site";
 import { EXPERIENCE_IDS } from "@/lib/experiences";
 import agencyLogo from "@/public/brand/quad-sousse-logo-4x.png";
+import camelOfferImage from "@/public/images/offers/camel-experience.webp";
+import combinedOfferImage from "@/public/images/offers/quad-camel-experience.webp";
+import quadOfferImage from "@/public/images/offers/quad-experience.webp";
 import camelCaravanImage from "@/public/images/real-experiences/camel-caravan.webp";
 import camelTrailImage from "@/public/images/real-experiences/camel-trail.webp";
 import fleetLineupImage from "@/public/images/real-experiences/fleet-lineup.webp";
@@ -48,6 +51,8 @@ const REAL_EXPERIENCE_LAYOUTS = [
   "lg:col-span-7 min-h-[390px] lg:min-h-[335px]",
   "lg:col-span-12 min-h-[300px] lg:min-h-[440px]",
 ] as const;
+
+const OFFER_IMAGES = [quadOfferImage, camelOfferImage, combinedOfferImage] as const;
 
 const revealVariants: Variants = {
   hidden: { opacity: 0, y: 42 },
@@ -295,8 +300,72 @@ export function LandingPage() {
       </section>
 
       <section
-        className="relative border-y border-[var(--color-blue)]/10 bg-[var(--color-white)] px-5 py-28 text-[var(--color-blue)] sm:px-8 lg:px-12 lg:py-36"
+        className="relative overflow-hidden border-y border-[var(--color-blue)]/10 bg-[var(--color-white)] px-5 py-28 text-[var(--color-blue)] sm:px-8 lg:px-12 lg:py-36"
         id="experiences"
+      >
+        <div className="qs-grid absolute inset-0 opacity-20" />
+        <div className="absolute -left-56 top-16 size-[32rem] rounded-full bg-[var(--color-red)]/8 blur-[140px]" />
+        <motion.div {...reveal} className="relative mx-auto w-full max-w-[1400px]">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.58fr] lg:items-end">
+            <div>
+              <p className="eyebrow-dark">{t.offers.eyebrow}</p>
+              <h2 className="mt-7 max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
+                {t.offers.title}
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-[var(--color-blue)]/58 lg:pb-2 lg:text-lg">
+              {t.offers.body}
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {OFFER_IMAGES.map((image, index) => {
+              const offer = t.offers.cards[index];
+
+              return (
+                <motion.article
+                  className={`group overflow-hidden rounded-[2rem] border border-[var(--color-blue)]/12 bg-[var(--color-blue-deep)] shadow-[0_28px_70px_rgba(7,21,40,.14)] ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                  key={offer.title}
+                  whileHover={reduceMotion ? undefined : { y: -8 }}
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      alt={offer.alt}
+                      className="object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
+                      fill
+                      loading="lazy"
+                      placeholder="blur"
+                      quality={92}
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      src={image}
+                    />
+                  </div>
+                  <div className="flex min-h-48 flex-col border-t border-white/10 p-6 text-white sm:p-7">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-red-light)]">
+                      {offer.duration}
+                    </span>
+                    <h3 className="mt-3 text-2xl font-black tracking-[-0.035em] sm:text-3xl">
+                      {offer.title}
+                    </h3>
+                    <a
+                      className="mt-auto inline-flex items-center gap-3 pt-7 text-xs font-black uppercase tracking-[0.13em] text-white transition hover:text-[var(--color-red-light)]"
+                      href={WHATSAPP_URL}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {t.offers.enquire} <span className="text-lg">↗</span>
+                    </a>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+        </motion.div>
+      </section>
+
+      <section
+        className="relative border-y border-[var(--color-blue)]/10 bg-[var(--color-white)] px-5 py-28 text-[var(--color-blue)] sm:px-8 lg:px-12 lg:py-36"
+        id="ride-formats"
       >
         <div className="qs-grid absolute inset-0 opacity-20" />
         <motion.div {...reveal} className="relative mx-auto w-full max-w-[1400px]">

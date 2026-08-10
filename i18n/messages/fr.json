@@ -90,6 +90,29 @@
         }
       ]
     },
+    "offers": {
+      "eyebrow": "Nos formules Kantaoui",
+      "title": "Quad, dromadaire, ou les deux.",
+      "body": "Trois expériences simples à choisir, accompagnées par notre équipe et pensées pour profiter pleinement des paysages autour de Kantaoui.",
+      "cards": [
+        {
+          "title": "Expérience quad",
+          "duration": "1 h 30 de quad + pause de 30 min",
+          "alt": "Affiche Kantaoui présentant une randonnée en quad d’une heure trente avec pause"
+        },
+        {
+          "title": "Expérience dromadaire",
+          "duration": "1 h 30 à dos de dromadaire + pause de 30 min",
+          "alt": "Affiche Kantaoui présentant une promenade à dos de dromadaire d’une heure trente avec pause"
+        },
+        {
+          "title": "Duo quad et dromadaire",
+          "duration": "3 heures d’expérience + pause de 30 min",
+          "alt": "Affiche Kantaoui présentant une expérience combinée en quad et à dos de dromadaire"
+        }
+      ],
+      "enquire": "Demander cette formule"
+    },
     "experiences": {
       "eyebrow": "Choisissez votre rythme",
       "title": "Trois façons de sortir du cadre.",

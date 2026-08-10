@@ -57,6 +57,17 @@ export type SiteDictionary = {
       alt: string;
     }>;
   };
+  offers: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    cards: Array<{
+      title: string;
+      duration: string;
+      alt: string;
+    }>;
+    enquire: string;
+  };
   experiences: {
     eyebrow: string;
     title: string;

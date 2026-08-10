@@ -90,6 +90,29 @@
         }
       ]
     },
+    "offers": {
+      "eyebrow": "Kantaoui packages",
+      "title": "Quad, camel, or both.",
+      "body": "Three easy-to-choose experiences, guided by our team and designed to make the most of the landscapes around Kantaoui.",
+      "cards": [
+        {
+          "title": "Quad experience",
+          "duration": "1h30 quad ride + 30-minute break",
+          "alt": "Kantaoui poster for a ninety-minute guided quad experience with a break"
+        },
+        {
+          "title": "Camel experience",
+          "duration": "1h30 camel ride + 30-minute break",
+          "alt": "Kantaoui poster for a ninety-minute guided camel experience with a break"
+        },
+        {
+          "title": "Quad and camel duo",
+          "duration": "3-hour experience + 30-minute break",
+          "alt": "Kantaoui poster for a combined quad and camel experience"
+        }
+      ],
+      "enquire": "Ask about this package"
+    },
     "experiences": {
       "eyebrow": "Choose your pace",
       "title": "Three ways to leave ordinary behind.",
