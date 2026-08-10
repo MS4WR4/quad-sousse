@@ -15,7 +15,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useReducedMotion } from "framer-motion";
 import {
   ACESFilmicToneMapping,
-  Color,
   Group,
   MathUtils,
   Mesh,
@@ -70,46 +69,41 @@ export function QuadCanvas({
       role="img"
     >
       <Canvas
-        camera={{ fov: 32, position: [4.8, 2.25, 5.8] }}
-        dpr={[1, 1.75]}
+        camera={{ fov: 36, position: [4.8, 2.25, 6.6] }}
+        dpr={[1, 1.5]}
         fallback={<p>{unavailableLabel}</p>}
         gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
         onCreated={({ gl }) => {
           gl.outputColorSpace = SRGBColorSpace;
           gl.toneMapping = ACESFilmicToneMapping;
-          gl.toneMappingExposure = 1.08;
+          gl.toneMappingExposure = 0.94;
         }}
         performance={{ max: 1, min: 0.5 }}
-        shadows
       >
-        <hemisphereLight args={[SCENE_COLORS.white, "#7a5a35", 1.85]} />
+        <hemisphereLight args={[SCENE_COLORS.white, "#5f4c38", 0.9]} />
         <directionalLight
-          castShadow
           color="#fff4dc"
-          intensity={4.2}
+          intensity={2.35}
           position={[5.5, 7.5, 4.5]}
-          shadow-bias={-0.00035}
-          shadow-mapSize-height={1024}
-          shadow-mapSize-width={1024}
         />
         <spotLight
-          angle={0.48}
+          angle={0.52}
           color={SCENE_COLORS.blueLight}
-          intensity={24}
-          penumbra={0.9}
-          position={[-4.5, 3.5, -2]}
+          intensity={7.5}
+          penumbra={0.95}
+          position={[-4.5, 4.2, -2]}
         />
         <pointLight
           color={SCENE_COLORS.red}
-          intensity={14}
+          intensity={4.5}
           position={[-3.4, 0.5, 2.4]}
         />
 
-        <Environment resolution={128}>
+        <Environment resolution={96}>
           <Lightformer
             color="#fff5dc"
             form="rect"
-            intensity={4.5}
+            intensity={2.35}
             position={[3, 5, 4]}
             rotation={[-Math.PI / 4, 0, 0]}
             scale={[5, 5, 1]}
@@ -117,7 +111,7 @@ export function QuadCanvas({
           <Lightformer
             color={SCENE_COLORS.blueLight}
             form="rect"
-            intensity={2.4}
+            intensity={1.25}
             position={[-4, 2, -4]}
             rotation={[0, Math.PI / 3, 0]}
             scale={[3, 3, 1]}
@@ -125,7 +119,7 @@ export function QuadCanvas({
           <Lightformer
             color={SCENE_COLORS.red}
             form="ring"
-            intensity={1.8}
+            intensity={0.8}
             position={[0, 1, 5]}
             scale={2.5}
           />
@@ -138,16 +132,16 @@ export function QuadCanvas({
         </Suspense>
 
         <ContactShadows
-          blur={2.6}
+          blur={3.2}
           far={4.5}
-          opacity={0.48}
-          position={[0, -1.05, 0]}
-          scale={8}
+          opacity={0.36}
+          position={[0, -1.04, 0]}
+          scale={7.6}
         />
         <OrbitControls
           autoRotate={!reduceMotion}
-          autoRotateSpeed={0.48}
-          dampingFactor={0.06}
+          autoRotateSpeed={0.34}
+          dampingFactor={0.075}
           enableDamping
           enablePan={false}
           enableZoom={false}
@@ -216,15 +210,19 @@ function NaturalTerrainStage({ reduceMotion }: { reduceMotion: boolean }) {
     <group position={[0, -0.02, -0.25]}>
       <mesh
         position={[0, -1.06, 0]}
-        receiveShadow
         rotation={[-Math.PI / 2, 0, 0]}
       >
-        <circleGeometry args={[3.8, 80]} />
+        <circleGeometry args={[3.65, 64]} />
         <meshStandardMaterial
-          color="#cbb58e"
+          color="#cfbd99"
           metalness={0.02}
           roughness={0.98}
         />
+      </mesh>
+
+      <mesh position={[0, -1.045, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[3.22, 3.3, 64]} />
+        <meshBasicMaterial color={SCENE_COLORS.red} opacity={0.72} transparent />
       </mesh>
 
       <group position={[0.2, -1, 0.05]} ref={trackRef} rotation={[-Math.PI / 2, 0, -0.2]}>
@@ -240,13 +238,10 @@ function NaturalTerrainStage({ reduceMotion }: { reduceMotion: boolean }) {
 
       {[
         [-2.55, -0.72, -1.45, 0.34],
-        [-2.15, -0.82, 1.28, 0.24],
         [2.35, -0.74, -1.38, 0.31],
         [2.7, -0.86, 0.85, 0.2],
-        [1.7, -0.9, 1.72, 0.16],
       ].map(([x, y, z, scale], index) => (
         <mesh
-          castShadow
           key={`${x}-${z}`}
           position={[x, y, z]}
           rotation={[index * 0.35, index * 0.7, index * 0.22]}
@@ -258,8 +253,8 @@ function NaturalTerrainStage({ reduceMotion }: { reduceMotion: boolean }) {
       ))}
 
       <group position={[0, -0.25, -1.6]} ref={dustRef}>
-        {Array.from({ length: 18 }, (_, index) => {
-          const angle = (index / 18) * Math.PI * 2;
+        {Array.from({ length: 10 }, (_, index) => {
+          const angle = (index / 10) * Math.PI * 2;
           const radius = 2.25 + (index % 4) * 0.22;
           return (
             <mesh
@@ -269,10 +264,10 @@ function NaturalTerrainStage({ reduceMotion }: { reduceMotion: boolean }) {
                 -0.25 + (index % 5) * 0.16,
                 Math.sin(angle) * radius * 0.28,
               ]}
-              scale={0.022 + (index % 3) * 0.012}
+              scale={0.018 + (index % 3) * 0.009}
             >
               <sphereGeometry args={[1, 8, 8]} />
-              <meshBasicMaterial color="#b79d75" opacity={0.42} transparent />
+              <meshBasicMaterial color="#b79d75" opacity={0.24} transparent />
             </mesh>
           );
         })}
@@ -311,7 +306,7 @@ function QuadRig({ modelUrl, reduceMotion }: QuadRigProps) {
       rotationIntensity={reduceMotion ? 0 : 0.08}
       speed={reduceMotion ? 0 : 1.7}
     >
-      <group ref={group} position={[0, -0.18, 0]}>
+      <group ref={group} position={[0, -0.14, 0]}>
         {modelUrl ? <LoadedQuad modelUrl={modelUrl} /> : <ProceduralQuad />}
       </group>
     </Float>
@@ -325,24 +320,22 @@ function LoadedQuad({ modelUrl }: { modelUrl: string }) {
   useLayoutEffect(() => {
     model.traverse((child) => {
       if (child instanceof Mesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
+        child.castShadow = false;
+        child.receiveShadow = false;
 
         const tuneMaterial = (source: MeshStandardMaterial) => {
           const material = source.clone();
-          const { r, g, b } = material.color;
-          const isRed = r > g * 1.35 && r > b * 1.2;
-          const isDark = r + g + b < 0.42;
+          material.envMapIntensity = 0.82;
+          material.metalness = material.metalnessMap
+            ? Math.min(material.metalness, 0.82)
+            : Math.min(material.metalness, 0.16);
+          material.roughness = material.roughnessMap
+            ? Math.max(material.roughness, 0.82)
+            : Math.max(material.roughness, 0.58);
 
-          material.envMapIntensity = isDark ? 0.72 : 1.35;
-          material.metalness = isRed ? 0.34 : isDark ? 0.08 : 0.68;
-          material.roughness = isRed ? 0.25 : isDark ? 0.82 : 0.32;
-
-          if (isRed) {
-            material.color.lerp(new Color(SCENE_COLORS.red), 0.42);
-            material.emissive = new Color("#260006");
-            material.emissiveIntensity = 0.16;
-          }
+          if (material.map) material.map.anisotropy = 8;
+          if (material.normalMap) material.normalMap.anisotropy = 8;
+          if (material.roughnessMap) material.roughnessMap.anisotropy = 8;
 
           material.needsUpdate = true;
           return material;
@@ -359,7 +352,7 @@ function LoadedQuad({ modelUrl }: { modelUrl: string }) {
     });
   }, [model]);
 
-  return <primitive object={model} rotation={[0.02, -0.58, 0]} scale={1.72} />;
+  return <primitive object={model} rotation={[0.015, -0.62, 0]} scale={1.62} />;
 }
 
 function ProceduralQuad() {
