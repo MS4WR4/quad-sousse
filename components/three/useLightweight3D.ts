@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 type NavigatorWithPerformanceHints = Navigator & {
   connection?: { effectiveType?: string; saveData?: boolean };
-  deviceMemory?: number;
 };
 
 export function useLightweight3D(maxWidth = 760) {
@@ -19,11 +18,11 @@ export function useLightweight3D(maxWidth = 760) {
         hints.connection?.saveData ||
         hints.connection?.effectiveType === "2g" ||
         hints.connection?.effectiveType === "slow-2g";
-      const constrainedHardware =
-        (hints.hardwareConcurrency > 0 && hints.hardwareConcurrency <= 4) ||
-        (typeof hints.deviceMemory === "number" && hints.deviceMemory <= 4);
 
-      setLightweight(Boolean(media.matches || constrainedConnection || constrainedHardware));
+      // Privacy-focused browsers often report an artificially low core or memory
+      // count. Treating those values as a hard limit made the deployed desktop
+      // experience fall back to a static image even on capable machines.
+      setLightweight(Boolean(media.matches || constrainedConnection));
     };
 
     selectMode();

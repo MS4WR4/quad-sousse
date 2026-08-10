@@ -72,6 +72,7 @@ export function QuadCanvas({
         camera={{ fov: 36, position: [4.8, 2.25, 6.6] }}
         dpr={[1, 1.5]}
         fallback={<p>{unavailableLabel}</p>}
+        frameloop={reduceMotion ? "demand" : "always"}
         gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
         onCreated={({ gl }) => {
           gl.outputColorSpace = SRGBColorSpace;
@@ -140,7 +141,7 @@ export function QuadCanvas({
         />
         <OrbitControls
           autoRotate={!reduceMotion}
-          autoRotateSpeed={0.34}
+          autoRotateSpeed={0.62}
           dampingFactor={0.075}
           enableDamping
           enablePan={false}
@@ -282,9 +283,11 @@ function QuadRig({ modelUrl, reduceMotion }: QuadRigProps) {
   useFrame((state, delta) => {
     if (!group.current || reduceMotion) return;
 
-    const targetX = state.pointer.y * 0.045;
+    const elapsed = state.clock.elapsedTime;
+    const targetX = state.pointer.y * 0.075 + Math.sin(elapsed * 1.25) * 0.012;
     const targetY =
-      state.pointer.x * 0.1 + Math.sin(state.clock.elapsedTime * 0.45) * 0.025;
+      state.pointer.x * 0.16 + Math.sin(elapsed * 0.65) * 0.055;
+    const targetZ = state.pointer.x * -0.02 + Math.sin(elapsed * 0.9) * 0.012;
 
     group.current.rotation.x = MathUtils.damp(
       group.current.rotation.x,
@@ -298,13 +301,25 @@ function QuadRig({ modelUrl, reduceMotion }: QuadRigProps) {
       4,
       delta,
     );
+    group.current.rotation.z = MathUtils.damp(
+      group.current.rotation.z,
+      targetZ,
+      4,
+      delta,
+    );
+    group.current.position.y = MathUtils.damp(
+      group.current.position.y,
+      -0.14 + Math.sin(elapsed * 1.75) * 0.035,
+      4,
+      delta,
+    );
   });
 
   return (
     <Float
-      floatingRange={reduceMotion ? [0, 0] : [-0.08, 0.08]}
-      rotationIntensity={reduceMotion ? 0 : 0.08}
-      speed={reduceMotion ? 0 : 1.7}
+      floatingRange={reduceMotion ? [0, 0] : [-0.14, 0.14]}
+      rotationIntensity={reduceMotion ? 0 : 0.16}
+      speed={reduceMotion ? 0 : 2.05}
     >
       <group ref={group} position={[0, -0.14, 0]}>
         {modelUrl ? <LoadedQuad modelUrl={modelUrl} /> : <ProceduralQuad />}
