@@ -274,6 +274,15 @@ export function LandingPage() {
                     unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-blue-deep)] via-[var(--color-blue-deep)]/5 to-transparent" />
+                  <div className="absolute left-5 top-5 z-10 rounded-xl border border-white/30 bg-white/92 px-3 py-2 shadow-[0_12px_34px_rgba(7,21,40,.22)] backdrop-blur-md sm:left-6 sm:top-6">
+                    <Image
+                      alt=""
+                      aria-hidden
+                      className="h-auto w-24 sm:w-28"
+                      quality={100}
+                      src={agencyLogo}
+                    />
+                  </div>
                   <span className="absolute right-5 top-5 rounded-full border border-white/18 bg-[var(--color-blue-deep)]/45 px-3 py-1.5 text-[10px] font-black tracking-[0.18em] text-white/75 backdrop-blur-md">
                     {String(index + 1).padStart(2, "0")}
                   </span>
