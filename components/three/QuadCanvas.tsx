@@ -56,7 +56,9 @@ export function QuadCanvas({
   unavailableLabel,
 }: QuadCanvasProps) {
   const reduceMotion = useReducedMotion() ?? false;
-  const lightweight = useLightweight3D();
+  // Keep the same interactive hero on phones. The hook still falls back for
+  // data-saving and genuinely slow network modes, but no longer for screen size.
+  const lightweight = useLightweight3D(0);
 
   if (reduceMotion || lightweight) {
     return <QuadCanvasFallback ariaLabel={ariaLabel} className={className} />;
